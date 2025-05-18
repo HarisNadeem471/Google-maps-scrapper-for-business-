@@ -1,49 +1,88 @@
-# Google Maps Business Scraper
+# 🗺️ Google Maps Business Scraper
 
-This project contains two scripts to automate the process of extracting business data from Google Maps URLs.
+This project automates the extraction of business data from Google Maps links. It includes two main Python scripts:
+
+1. `convert_csv_to_json.py` – Converts URLs from a CSV file to a clean JSON format.
+2. `fallback_playwright_scraper.py` – Uses Playwright to scrape business data from those URLs.
+
+---
 
 ## 📂 Overview
 
-1. `convert_csv_to_json.py`: Converts a CSV file with URL columns into a JSON array.
-2. `fallback_playwright_scraper.py`: Uses Playwright to scrape business data from the URLs in `links.json`.
+**Step 1**: Convert your raw CSV file (e.g., exported from a lead list) into a clean JSON list of Google Maps URLs.
+
+**Step 2**: Scrape business details such as:
+- Name
+- Address
+- Phone number
+- Website
+- Rating
+- Category
+- Opening hours
+- Short description
 
 ---
 
 ## 🛠️ Requirements
 
-- Python 3.7+
-- Google Chrome or Chromium (Playwright downloads its own headless version)
+- Python 3.7 or higher
 - pip (Python package manager)
+- Google Chrome or Chromium (Playwright installs its own headless version)
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation (Step-by-Step)
 
-1. Clone this repository:
-   git clone https://github.com/your-username/google-maps-scraper.git
-   cd google-maps-scraper
-2. Install the Python dependencies:
-   pip install -r requirements.txt
-   playwright install
+### 1. Clone this repository
 
+```bash
+git clone https://github.com/your-username/google-maps-scraper.git
+cd google-maps-scraper
+```
 
-🚀 Usage
-Run both scripts using the run_all.py script:
+### 2. Install Python dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Install Playwright browser binaries
+
+```bash
+playwright install
+```
+
+---
+
+## 🚀 Usage
+
+### ✅ Option A: Run both scripts with one command
+
+```bash
 python run_all.py
+```
 
+### ⚙️ Option B: Run scripts manually
 
-Or run them individually:
-1. Convert CSV to JSON:
-  python convert_csv_to_json.py
-2. Scrape the data:
-  python fallback_playwright_scraper.py
+#### Step 1: Convert CSV to JSON
 
+```bash
+python convert_csv_to_json.py
+```
 
+#### Step 2: Scrape data from Google Maps
 
-📁 Outputs
-links.json: List of cleaned Google Maps URLs (generated from the CSV).
+```bash
+python fallback_playwright_scraper.py
+```
 
-output_results.csv: Final scraped results.
+---
 
-failed_links.csv: Any URLs that failed during scraping.
+## 📁 Output Files
+
+| File Name             | Description                                           |
+|----------------------|-------------------------------------------------------|
+| `links.json`         | JSON array of cleaned Google Maps URLs               |
+| `output_results.csv` | Final scraped business data                           |
+| `failed_links.csv`   | List of URLs that failed during scraping with reason  |
 
