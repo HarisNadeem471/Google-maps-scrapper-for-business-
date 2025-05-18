@@ -20,14 +20,13 @@ This project contains two scripts to automate the process of extracting business
 ## 📦 Installation
 
 1. Clone this repository:
-   ```bash
    git clone https://github.com/your-username/google-maps-scraper.git
    cd google-maps-scraper
 
 
-### Install the Python dependencies:
-pip install -r requirements.txt
-playwright install
+## Install the Python dependencies:
+   pip install -r requirements.txt
+   playwright install
 
 
 🚀 Usage
