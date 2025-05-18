@@ -36,7 +36,7 @@ This project automates the extraction of business data from Google Maps links. I
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/your-username/google-maps-scraper.git
+git clone https://github.com/HarisNadeem471/Google-maps-scrapper-for-business-.git
 cd google-maps-scraper
 ```
 
