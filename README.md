@@ -1,6 +1,3 @@
-# Google-maps-scrapper-for-business
-
-
 # Google Maps Business Scraper
 
 This project contains two scripts to automate the process of extracting business data from Google Maps URLs.
